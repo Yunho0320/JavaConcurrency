@@ -1,2 +1,4 @@
 # JavaConcurrency
-The original code for Java Concurrency in Practice is publicly available on the official website. This repository is intended for my personal study only. It includes the original examples as well as personal modifications and experiments. All rights remain with the original authors and publishers.
+This repository documents my study of *Java Concurrency in Practice* by Brian Goetz.
+
+It is primarily intended for my personal learning. Without access to the textbook and my notes, this repository may not be useful to others.

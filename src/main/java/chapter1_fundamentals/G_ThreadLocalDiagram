@@ -1,0 +1,20 @@
+            Shared ThreadLocal instance
+                    |
+            +--------------------+
+            | ThreadLocal<String>|
+            +--------------------+
+                    |
+     -------------------------------------
+     |                 |                 |
++------------+   +------------+   +------------+
+|  Thread A  |   |  Thread B  |   |  Thread C  |
+|------------|   |------------|   |------------|
+| set("A")   |   | set("B")   |   | set("C")   |
+| get() => A |   | get() => B |   | get() => C |
++------------+   +------------+   +------------+
+
+
+ThreadLocal<String> is a single shared object (like a static variable).
+But each thread stores its own value inside it.
+When Thread A calls .get(), it only sees "A" — not what B or C stored.
+No synchronization is needed, because there's no actual sharing of the values.
